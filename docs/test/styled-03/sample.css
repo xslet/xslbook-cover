@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+
+body {
+  font-family: 'Mukta', sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: #346;
+  background-color: #ddb;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  padding-top: 5.8rem;
+  padding-bottom: 5rem;
+  letter-spacing: 1rem;
+  border-top: double 0.7rem #679;
+  border-bottom: double 0.7rem #679;
+}
+
+
+div.subtitle {
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: 0rem;
+  line-height: 4rem;
+}
+
+div.xslbook-body {
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  color: #fff;
+}
+
+
+@media screen {
+  main {
+    background-color: #679;
+    background-image: url('./sample.svg');
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  h1 {
+    margin-top: calc(100vh - 37rem);
+  }
+
+  div.xslbook-body {
+  }
+}
+
+@media print {
+  body {
+    background-color: #679;
+    background-image: url('./sample.svg');
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  main {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  h1 {
+    margin-top: calc(100vh - 40rem);
+  }
+
+  div.xslbook-body {
+  }
+}

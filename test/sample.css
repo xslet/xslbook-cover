@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+body {
+  font-family: Helvetica, arial, sans-serif;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+main {
+  padding: 3rem;
+}
+
+h1 {
+  margin: 0rem;
+  padding: 0rem;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+div.subtitle, span.subtitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+h1 + div.xslbook-body, div.subtitle + div.xslbook-body {
+  margin-top: 1.5rem;
+}
+
+
+@media screen {
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    background-color: #aaa;
+  }
+
+  main {
+    margin: 2rem;
+    background-color: white;
+    box-shadow: 6px 6px 5px rgba(112, 112, 112, 1.0);
+    min-height: calc(100vh - 10rem);
+  }
+}
+
+
+@page {
+  size: A4;
+}
+
+@media print {
+  html {
+    font-size: 4.5mm;
+  }
+
+  main {
+    margin: 0rem;
+  }
+}
