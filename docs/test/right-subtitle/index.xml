@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="../sample.xsl"?>
+
+<xslbook>
+
+ <title>First Title</title>
+
+ <subtitle right-of="t2">1st subtitle</subtitle>
+ <title id="t2">Second Title</title>
+ <subtitle right-of="t2">2nd subtitle</subtitle>
+
+ <title id="t3">Third Title</title>
+
+ <body>
+This page is a sample for subtitles displaying on right of a book title.
+ </body>
+
+</xslbook>

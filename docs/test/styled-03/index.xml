@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="../sample.xsl"?>
+
+<xslbook>
+ <body>AUTHOR NAME</body>
+
+ <title id="t">THIS IS THE <br/> COVER TITLE <br/> OF BOOK</title>
+
+ <subtitle spine="false" bottom-of="t">This is a subtitle of this book which doesn't print on the window title.</subtitle>
+</xslbook>

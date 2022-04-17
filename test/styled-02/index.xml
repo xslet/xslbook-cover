@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="../sample.xsl"?>
+
+<xslbook>
+ <title>THE</title>
+ <title>COVER TITLE</title>
+ <title>OF</title>
+ <title>BOOK</title>
+
+ <body id="author">Author Name</body>
+</xslbook>

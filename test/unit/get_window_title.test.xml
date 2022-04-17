@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="unit-test.xsl"?>
+
+<describe title="book:get_window_title">
+
+ <it title="should get a title text from a &lt;title&gt; element">
+  <compute name="book:get_window_title">
+   <title>simple title</title>
+  </compute>
+  <expect>simple title</expect>
+ </it>
+
+ <it title="should get a title text from multiple &lt;title&gt; elements in the order of appearence">
+  <compute name="book:get_window_title">
+   <title>first title</title>
+   <title>second title</title>
+  </compute>
+  <expect>first title second title</expect>
+ </it>
+
+ <it title="should get a title text from &lt;title&gt; and &lt;subtitle&gt; elements in the order of appearence">
+  <compute name="book:get_window_title">
+   <subtitle>1st subtitle</subtitle>
+   <title>first title</title>
+   <subtitle>2nd subtitle</subtitle>
+   <title>second title</title>
+   <subtitle>3rd subtitle</subtitle>
+   <subtitle>4th subtitle</subtitle>
+  </compute>
+  <expect>1st subtitle first title 2nd subtitle second title 3rd subtitle 4th subtitle</expect>
+ </it>
+
+ <it title="should get a title text from &lt;subtitle&gt; element in the order of appearence even if they have @*-of attributes">
+  <compute name="book:get_window_title">
+   <subtitle bottom-of="tt">Bottom</subtitle>
+   <subtitle right-of="tt">Right</subtitle>
+   <title id="tt">Title</title>
+   <subtitle top-of="tt">Top</subtitle>
+   <subtitle left-of="tt">Left</subtitle>
+  </compute>
+  <expect>Bottom Right Title Top Left</expect>
+ </it>
+
+ <it title="should not get texts of &lt;subtitle&gt; elements of which @spine attributes are 'false'">
+  <compute name="book:get_window_title">
+   <subtitle bottom-of="tt" spine="false">Bottom</subtitle>
+   <subtitle right-of="tt">Right</subtitle>
+   <title id="tt">Title</title>
+   <subtitle top-of="tt">Top</subtitle>
+   <subtitle left-of="tt" spine="false">Left</subtitle>
+  </compute>
+  <expect>Right Title Top</expect>
+ </it>
+
+ <it title="should get title texts from an external file if @data-src attribute is specified">
+  <compute name="book:get_window_title"
+   ><subtitle left-of="t1" data-src="data/get_window_title.data.xml"
+    ><value of="/List/Item[1]"/></subtitle
+   ><title id="t1" data-src="data/get_window_title.data.xml"
+    ><value of="/List/Item[3]"/></title
+   ><subtitle right-of="t1" data-src="data/get_window_title.data.xml"
+    ><value of="/List/Item[2]"/></subtitle
+   ></compute>
+  <expect>aaa ccc bbb</expect>
+ </it>
+
+ <it title="should get title texts from an external file if parent element has @ata-src attribute">
+  <compute name="book:get_window_title"
+   ><param name="data_url">data/get_window_title.data.xml</param
+   ><subtitle top-of="t2"><value of="/List/Item[2]"/></subtitle
+   ><title id="t2"><value of="/List/Item[1]"/></title
+   ><subtitle bottom-of="t2"><value of="/List/Item[3]"/></subtitle
+  ></compute>
+  <expect>bbb aaa ccc</expect>
+ </it>
+
+</describe>

@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Open+Sans:wght@300&display=swap');
+
+main {
+  background-image: url("./sample.svg");
+  background-size: auto 40%;
+  background-position: 50% 20%;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 4rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+div.xslbook-body {
+  font-family: 'Inspiration', cursive;
+  font-size: 4rem;
+  text-align: center;
+}
+
+h1 + div.body, div.subtitle + div.body {
+  margin: 0rem;
+}
+
+@media screen {
+  main {
+    background-color: #ffc;
+  }
+
+  h1 {
+    margin-top: calc(100vh - 24rem);
+  }
+}
+
+@media print {
+  body {
+    background-color: #ffc;
+  }
+
+  main {
+    background-color: transparent;
+  }
+
+  h1 {
+    margin-top: calc(100vh - 20rem);
+  }
+}
