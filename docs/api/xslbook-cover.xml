@@ -7,7 +7,7 @@
 
 ** Copyright (C) 2022 xslet project
 ** MIT License
---><xsl:stylesheet xmlns:book="https://github.com/xslet/2020/xslbook" xmlns:do="https://github.com/xslet/2020/xsldo" xmlns:ut="https://github.com/xslet/2020/xslutil" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"><!--** A set of utilities for XSLT programs on Web browsers. --><xsl:import href="xslutil.xsl"/><!--** XML data operation libraries for XSLT programs on Web browsers.  --><xsl:import href="xsldo.xsl"/><!--** XML data operation elements for xslbook. --><xsl:import href="xslbook-do.xsl"/><!--** xslbook base library. --><xsl:import href="xslbook-base.xsl"/><!--**
+--><xsl:stylesheet xmlns:book="https://github.com/xslet/2020/xslbook" xmlns:do="https://github.com/xslet/2020/xsldo" xmlns:ut="https://github.com/xslet/2020/xslutil" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"><!--** A set of utilities for XSLT programs on Web browsers. --><xsl:import href="xslutil.xsl"/><!--** XML data operation libraries for XSLT programs on Web browsers.  --><xsl:import href="xsldo.xsl"/><!--** XML data operation elements for xslbook. --><xsl:import href="xslbook-do.xsl"/><!--** xslbook base library. --><xsl:import href="xslbook-base.xsl"/><xsl:strip-space elements="*"/><!--**
   Applies to a book title element in "book" mode.
   This match template prints a HTML <h1> element from a <title> element.
   This also prints HTML elements for sub titles from <subtitle> elements with @top-of/@left-of/@right-of/@bottom-of attributes at the same level with this <title> element.
