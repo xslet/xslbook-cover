@@ -8,7 +8,7 @@
 
 
  <!--**
-  Makes a window title from <title> and <subtitle> element.
+  This named template makes a window title from <title> and <subtitle> element.
   This template prints contents of <title> and <subtitle> elements in the order of the appearance in a xslbook document.
   If <subtitle> element has @spine attribute of which the value is "false", the element is hidden on a window title.
  -->
