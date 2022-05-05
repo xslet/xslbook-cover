@@ -3,7 +3,7 @@
 
 <xslbook>
  <title id="t1" prefix="[" suffix="]">Book Title</title>
- <subtitle right-of="t1" prefix="─" suffix="〜">subttile</subtitle>
+ <subtitle right-of="t1" prefix="─" suffix="〜">subtitle</subtitle>
 
  <body>
 This is a sample of a title and a subtitle with prefix and suffix.
