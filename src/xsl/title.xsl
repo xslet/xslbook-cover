@@ -8,9 +8,9 @@
 
 
  <!--**
-  Applies to a book title element in "book" mode.
-  This match template prints a HTML <h1> element from a <title> element.
-  This also prints HTML elements for sub titles from <subtitle> elements with @top-of/@left-of/@right-of/@bottom-of attributes at the same level with this <title> element.
+  This match template is applied to <title> element immediately below the root <xslbook> element and displays a book title. In addition, this template displays subtitles around a book title by <subtitle> elements with @top-of, @left-of, @right-of, or @bottom-of attributes.
+  The @mode attribute of this XSLT template is "xslbook".
+  This match template can have child elements, including elements provided by xslbook-do library. And this template can have @data-src attribute to obtain data in an external XML file.
  -->
  <xsl:template match="title" mode="xslbook">
   <!--** An URL of external data file from an ancestor element. -->
@@ -65,8 +65,9 @@
 
 
  <!--**
-  Applies to a book subtitle element in "book" mode.
-  This match template prints a HTML <div> element from a <subttile> element.
+  This match template is applied to <subtitle> element without @top-of, @left-of, @right-of, and @bottom-of attributes and displays a book subtitle.
+  This @mode attribute of this XSLT template is "xslbook".
+  This match template can have child elements, including elements provided by xslbook-do library. And this template can have @data-src attribute to obtain data in an external XML file.
  -->
  <xsl:template match="subtitle[not(@top-of or @left-of or @right-of or @bottom-of)]" mode="xslbook">
   <!--** An URL of external data file from an ancestor element. -->
@@ -97,7 +98,6 @@
    <xsl:with-param name="data_url" select="$data_url"/>
   </xsl:call-template>
   <xsl:apply-templates select="child::node()[name() != 'attr']">
-   <xsl:with-param name="name">prefix</xsl:with-param>
    <xsl:with-param name="data_url" select="$data_url"/>
   </xsl:apply-templates>
   <xsl:call-template name="book:get_attr">

@@ -8,7 +8,9 @@
 
 
  <!--**
-  Prints book descriptions area by <body> elements.
+  This match templates is applied to <body> element and displays book descriptions.
+  This @mode attribute of this XSLT template is "xslbook".
+  This match template can have child elements, including elements provided by xslbook-do library. And this template can have @data-src attribute to obtain data in an external XML file.
  -->
  <xsl:template match="body" mode="xslbook">
   <!--** An URL of external data file from an ancestor element. -->
