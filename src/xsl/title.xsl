@@ -113,21 +113,27 @@
 
  <xsl:template name="book:_get_book_title_text">
   <xsl:param name="data_url"/>
-  <span class="prefix">
+  <xsl:variable name="_prefix">
    <xsl:call-template name="book:get_attr">
     <xsl:with-param name="name">prefix</xsl:with-param>
     <xsl:with-param name="data_url" select="$data_url"/>
    </xsl:call-template>
-  </span>
-  <xsl:apply-templates select="child::node()[name() != 'attr']">
-   <xsl:with-param name="data_url" select="$data_url"/>
-  </xsl:apply-templates>
-  <span class="suffix">
+  </xsl:variable>
+  <xsl:variable name="_suffix">
    <xsl:call-template name="book:get_attr">
     <xsl:with-param name="name">suffix</xsl:with-param>
     <xsl:with-param name="data_url" select="$data_url"/>
    </xsl:call-template>
-  </span>
+  </xsl:variable>
+  <xsl:if test="string-length($_prefix) != 0">
+   <span class="prefix"><xsl:value-of select="$_prefix"/></span>
+  </xsl:if>
+  <xsl:apply-templates select="child::node()[name() != 'attr']">
+   <xsl:with-param name="data_url" select="$data_url"/>
+  </xsl:apply-templates>
+  <xsl:if test="string-length($_suffix) != 0">
+   <span class="suffix"><xsl:value-of select="$_suffix"/></span>
+  </xsl:if>
  </xsl:template>
 
  <xsl:template name="book:_get_book_title_text_updating_data_url">
