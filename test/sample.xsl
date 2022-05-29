@@ -6,7 +6,7 @@
  xmlns:ut="https://github.com/xslet/2020/xslutil"
  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
- <xsl:import href="unit/unit-test.xsl"/>
+ <xsl:import href="res/dist/xslbook-cover.xsl"/>
 
  <xsl:strip-space elements="*"/>
 
@@ -29,6 +29,7 @@
    <body>
     <main>
      <xsl:apply-templates select="title|body|subtitle[not(@top-of or @left-of or @right-of or @bottom-of)]" mode="xslbook">
+      <xsl:with-param name="parent">xslbook</xsl:with-param>
       <xsl:with-param name="data_url" select="$_data_url"/>
      </xsl:apply-templates>
     </main>
