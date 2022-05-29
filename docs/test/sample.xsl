@@ -29,6 +29,7 @@
    <body>
     <main>
      <xsl:apply-templates select="title|body|subtitle[not(@top-of or @left-of or @right-of or @bottom-of)]" mode="xslbook">
+      <xsl:with-param name="parent">xslbook</xsl:with-param>
       <xsl:with-param name="data_url" select="$_data_url"/>
      </xsl:apply-templates>
     </main>
