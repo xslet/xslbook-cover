@@ -6,7 +6,7 @@
  xmlns:ut="https://github.com/xslet/2020/xslutil"
  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
- <xsl:import href="unit/unit-test.xsl"/>
+ <xsl:import href="res/dist/xslbook-cover.xsl"/>
 
  <xsl:strip-space elements="*"/>
 
