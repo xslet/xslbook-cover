@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="application/xml" href="../sample.xsl"?>
 
-<xslbook>
+<book>
  <title>The Book Title</title>
- <body id="author">Author Name</body>
-</xslbook>
+ <desc id="author">Author Name</desc>
+</book>

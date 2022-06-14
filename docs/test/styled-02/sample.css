@@ -16,7 +16,7 @@ h1:nth-of-type(even) {
   font-size: 3.5rem;
 }
 
-div.xslbook-body {
+div.book-desc {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
   color: #fff;
@@ -35,7 +35,7 @@ div.xslbook-body {
     margin-top: 4rem;
   }
 
-  h1 + div.xslbook-body {
+  h1 + div.book-desc {
     margin-top: calc(100vh - 35rem);
   }
 }
@@ -55,7 +55,7 @@ div.xslbook-body {
     margin-top: 7rem;
   }
 
-  h1 + div.xslbook-body {
+  h1 + div.book-desc {
     margin-top: calc(100vh - 35rem);
   }
 }

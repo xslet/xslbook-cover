@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="application/xml" href="../sample.xsl"?>
 
-<xslbook>
+<book>
  <title id="pfxsfx" prefix="[" suffix="]">Book Title</title>
  <subtitle id="sub1" left-of="pfxsfx" prefix="〜">subtitle1</subtitle>
  <subtitle right-of="pfxsfx" prefix="(" suffix=")">subtitle2</subtitle>
 
- <body>
+ <desc>
 This is a sample of a title and a subtitle with prefix and suffix.
- </body>
-</xslbook>
+ </desc>
+</book>

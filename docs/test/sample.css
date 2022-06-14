@@ -17,12 +17,12 @@ h1 {
   line-height: 1;
 }
 
-div.xslbook-subtitle, span.xslbook-subtitle {
+div.book-subtitle, span.book-subtitle {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-h1 + div.xslbook-body, div.xslbook-subtitle + div.xslbook-body {
+h1 + div.book-desc, div.book-subtitle + div.book-desc {
   margin-top: 1.5rem;
 }
 
@@ -33,7 +33,7 @@ h1#pfxsfx > span.prefix::before {
 h1#pfxsfx > span.suffix::after {
   content: '}';
 }
-h1#pfxsfx > span.xslbook-subtitle:first-of-type > span.prefix {
+h1#pfxsfx > span.book-subtitle:first-of-type > span.prefix {
   display: none;
 }
 

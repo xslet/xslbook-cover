@@ -8,11 +8,11 @@
 
 
  <!--**
-  This match template is applied to <title> element immediately below the root <xslbook> element and displays a book title. In addition, this template displays subtitles around a book title by <subtitle> elements with @top-of, @left-of, @right-of, or @bottom-of attributes.
-  The @mode attribute of this XSLT template is "xslbook".
+  This match template is applied to <title> element immediately below the root <book> element and displays a book title. In addition, this template displays subtitles around a book title by <subtitle> elements with @top-of, @left-of, @right-of, or @bottom-of attributes.
+  The @mode attribute of this XSLT template is "xslbook-cover".
   This match template can have child elements, including elements provided by xslbook-do library. And this template can have @data-src attribute to obtain data in an external XML file.
  -->
- <xsl:template match="title" mode="xslbook">
+ <xsl:template match="title" mode="xslbook-cover">
   <!--** An URL of external data file from an ancestor element. -->
   <xsl:param name="data_url"/>
   <xsl:variable name="_data_url">
@@ -25,10 +25,10 @@
     <xsl:with-param name="data_url" select="$_data_url"/>
    </xsl:call-template>
   </xsl:variable>
-  <h1 class="title xslbook-title">
+  <h1 class="title book-title">
    <xsl:attribute name="id"><xsl:value-of select="$_id"/></xsl:attribute>
    <xsl:for-each select="../subtitle[@top-of=$_id]">
-    <div class="subtitle xslbook-subtitle top-of-title">
+    <div class="subtitle book-subtitle top-of-title">
      <xsl:attribute name="id">
       <xsl:call-template name="book:get_id">
        <xsl:with-param name="data_url" select="$_data_url"/>
@@ -40,7 +40,7 @@
     </div>
    </xsl:for-each>
    <xsl:for-each select="../subtitle[@left-of=$_id]">
-    <span class="subtitle xslbook-subtitle left-of-title">
+    <span class="subtitle book-subtitle left-of-title">
      <xsl:attribute name="id">
       <xsl:call-template name="book:get_id">
        <xsl:with-param name="data_url" select="$_data_url"/>
@@ -57,7 +57,7 @@
    </xsl:call-template>
    <xsl:for-each select="../subtitle[@right-of=$_id]">
     <xsl:value-of select="' '"/>
-    <span class="subtitle xslbook-subtitle right-of-title">
+    <span class="subtitle book-subtitle right-of-title">
      <xsl:attribute name="id">
       <xsl:call-template name="book:get_id">
        <xsl:with-param name="data_url" select="$_data_url"/>
@@ -69,7 +69,7 @@
     </span>
    </xsl:for-each>
    <xsl:for-each select="../subtitle[@bottom-of=$_id]">
-    <div class="subtitle xslbook-subtitle bottom-of-title">
+    <div class="subtitle book-subtitle bottom-of-title">
      <xsl:attribute name="id">
       <xsl:call-template name="book:get_id">
        <xsl:with-param name="data_url" select="$_data_url"/>
@@ -86,10 +86,10 @@
 
  <!--**
   This match template is applied to <subtitle> element without @top-of, @left-of, @right-of, and @bottom-of attributes and displays a book subtitle.
-  This @mode attribute of this XSLT template is "xslbook".
+  This @mode attribute of this XSLT template is "xslbook-cover".
   This match template can have child elements, including elements provided by xslbook-do library. And this template can have @data-src attribute to obtain data in an external XML file.
  -->
- <xsl:template match="subtitle[not(@top-of or @left-of or @right-of or @bottom-of)]" mode="xslbook">
+ <xsl:template match="subtitle[not(@top-of or @left-of or @right-of or @bottom-of)]" mode="xslbook-cover">
   <!--** An URL of external data file from an ancestor element. -->
   <xsl:param name="data_url"/>
   <xsl:variable name="_data_url">
@@ -102,7 +102,7 @@
     <xsl:with-param name="data_url" select="$_data_url"/>
    </xsl:call-template>
   </xsl:variable>
-  <div class="subtitle xslbook-subtitle">
+  <div class="subtitle book-subtitle">
    <xsl:attribute name="id"><xsl:value-of select="$_id"/></xsl:attribute>
    <xsl:call-template name="book:_get_book_title_text">
     <xsl:with-param name="data_url" select="$_data_url"/>

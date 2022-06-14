@@ -17,13 +17,13 @@ h1 {
   text-align: center;
 }
 
-div.xslbook-body {
+div.book-desc {
   font-family: 'Inspiration', cursive;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
 }
 
-h1 + div.body, div.subtitle + div.body {
+h1 + div.desc, div.subtitle + div.desc {
   margin: 0rem;
 }
 
