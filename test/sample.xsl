@@ -10,7 +10,7 @@
 
  <xsl:strip-space elements="*"/>
 
- <xsl:template match="/xslbook">
+ <xsl:template match="/book">
   <xsl:variable name="_data_url">
    <xsl:call-template name="book:get_data_url"/>
   </xsl:variable>
@@ -28,8 +28,7 @@
    </head>
    <body>
     <main>
-     <xsl:apply-templates select="title|body|subtitle[not(@top-of or @left-of or @right-of or @bottom-of)]" mode="xslbook">
-      <xsl:with-param name="parent">xslbook</xsl:with-param>
+     <xsl:apply-templates select="title|desc|subtitle[not(@top-of or @left-of or @right-of or @bottom-of)]" mode="xslbook-cover">
       <xsl:with-param name="data_url" select="$_data_url"/>
      </xsl:apply-templates>
     </main>

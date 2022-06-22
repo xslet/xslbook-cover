@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="application/xml" href="../sample.xsl"?>
 
-<xslbook data-src="file-1.xml">
+<book data-src="file-1.xml">
 
  <title id="t1">
   <value of="/List1/Item1[1]"/>
@@ -23,7 +23,7 @@
   <value of="/List2/Item2[3]"/>
  </subtitle>
 
- <body>
+ <desc>
 This page is a sample which get title/subtitle text from external data files.
- </body>
-</xslbook>
+ </desc>
+</book>

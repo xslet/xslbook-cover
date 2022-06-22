@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="application/xml" href="../sample.xsl"?>
 
-<xslbook>
+<book>
  <title id="t1">Book Title</title>
  <subtitle right-of="t1" spine="false">subtitle-1</subtitle>
  <subtitle spine="false">subtitle-2</subtitle>
 
- <body>
+ <desc>
 This is a sample of subtitle with spine="false", which are hidden on a window title.
- </body>
-</xslbook>
+ </desc>
+</book>

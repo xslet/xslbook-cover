@@ -28,7 +28,7 @@ div.subtitle {
   line-height: 4rem;
 }
 
-div.xslbook-body {
+div.book-desc {
   font-weight: bold;
   text-align: center;
   letter-spacing: 0.2rem;
@@ -48,7 +48,7 @@ div.xslbook-body {
     margin-top: calc(100vh - 37rem);
   }
 
-  div.xslbook-body {
+  div.book-desc {
   }
 }
 
@@ -71,6 +71,6 @@ div.xslbook-body {
     margin-top: calc(100vh - 40rem);
   }
 
-  div.xslbook-body {
+  div.book-desc {
   }
 }

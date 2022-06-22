@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="application/xml" href="../sample.xsl"?>
 
-<xslbook>
+<book>
 
  <title>First Title</title>
  <title id="t2">Second Title</title>
@@ -13,8 +13,8 @@
  <subtitle right-of="t2">4th subtitle</subtitle>
 
 
- <body>
+ <desc>
 This page is a sample for subtitles displaying on all side of a book title.
- </body>
+ </desc>
 
-</xslbook>
+</book>
